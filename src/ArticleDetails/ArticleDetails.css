@@ -1,0 +1,12 @@
+/* .details-image {
+    width: 100%;
+} */
+.details {
+    display: flex;
+    align-items: center;
+}
+.info {
+    display: flex;
+    flex-direction: column;
+
+}
