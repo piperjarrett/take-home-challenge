@@ -1,10 +1,18 @@
 import Article from "../Article/Article";
-import './Articles.css'
+import "./Articles.css";
 
-const Articles = ({ articles }) => {
-  const allArticles = articles.map((article) => {
-    return <Article article={article} />;
-  });
+const Articles = ({ originalArticles, filteredArticles }) => {
+  let allArticles;
+  if (!filteredArticles.length) {
+    allArticles = originalArticles.map((article) => {
+      return <Article article={article} />;
+    });
+  } else {
+    allArticles = filteredArticles.map((article) => {
+      return <Article article={article} />;
+    });
+  }
+
   return <div className="articles-container">{allArticles}</div>;
 };
 

@@ -1,12 +1,37 @@
-/* .details-image {
-    width: 100%;
-} */
+
 .details {
     display: flex;
     align-items: center;
+    margin: 5rem;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    border: 1px solid #494d5f;
+    background-color: white;
+    padding: 1rem;
+    flex-direction: column;
+    color: black;
+    border: 1px solid white;
 }
+
 .info {
     display: flex;
     flex-direction: column;
+    padding: 3rem;
+    /* width: 30rem;
+    background-color: #494d5f; */
+    color: white
+}
 
+.nyTimes-article {
+    text-decoration: underline;
+    color: blue;
+}
+
+.nyTimes-article:hover {
+    cursor: pointer;
+}
+
+.date-section {
+    display: flex;
+    justify-content: space-evenly;
 }
