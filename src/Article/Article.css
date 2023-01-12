@@ -43,4 +43,20 @@ button {
         align-items: center;
         margin: 1rem;
     }
+    
 }
+@media only screen and (min-width:300px) and (max-width:675px) {
+    .article{
+        border: 1px solid white;
+        background-color: white;
+        margin: 0.3rem;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        padding: 0.5rem;
+        justify-content: center;
+
+    }
+    
+}
+

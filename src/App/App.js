@@ -9,9 +9,9 @@ import Search from "../Search/Search";
 function App() {
   const [filteredArticles, setFilteredArticles] = useState([]);
   const [originalArticles, setOriginalArticles] = useState([]);
-  const [sections, setSetctions] = useState("");
   const [error, setError] = useState("");
   // const apiKey = process.env.REACT_APP_API_KEY;
+  
   useEffect(() => {
     fetch(
       `https://api.nytimes.com/svc/topstories/v2/home.json?api-key=Gt7He9ek2wKxfiDtXaqvAIdfCOwBIrQw`
