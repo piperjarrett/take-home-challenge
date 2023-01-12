@@ -1,17 +1,14 @@
-import { Link, useParams } from "react-router-dom";
-import "./ArticleDetails.css";
-const ArticleDetails = ({ article}) => {
 
-  const dateCreated = new Date(article.created_date);
-  const year = dateCreated.getFullYear();
-  const day = dateCreated.getDay();
-  const month = dateCreated.getMonth();
+import "./ArticleDetails.css";
+const ArticleDetails = ({ article }) => {
 
   const newTab = () => {
     window.open(article.short_url);
   };
 
-  return (
+  return !article ? (
+    <h3>Loading</h3>
+  ) : (
     <div className="details">
       <h3>{article.title}</h3>
       <h4>{article.byline}</h4>
@@ -24,9 +21,6 @@ const ArticleDetails = ({ article}) => {
       />
       <p className="p-info">{article.abstract}</p>
       <div className="date-section">
-        <p className="p-info">
-          Created: {1 + month}/{day}/{year}
-        </p>
         <p className="p-info">Section: {article.section.toUpperCase()}</p>
       </div>
       <p className="nyTimes-article" onClick={newTab}>

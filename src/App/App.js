@@ -10,11 +10,11 @@ function App() {
   const [filteredArticles, setFilteredArticles] = useState([]);
   const [originalArticles, setOriginalArticles] = useState([]);
   const [error, setError] = useState("");
-  const apiKey = process.env.REACT_APP_API_KEY;
+  // const apiKey = process.env.REACT_APP_API_KEY;
 
   useEffect(() => {
     fetch(
-      `https://api.nytimes.com/svc/topstories/v2/home.json?api-key=${apiKey}`
+      `https://api.nytimes.com/svc/topstories/v2/home.json?api-key=Gt7He9ek2wKxfiDtXaqvAIdfCOwBIrQw`
     )
       .then((resp) => resp.json())
       .then((data) => {
@@ -34,8 +34,7 @@ function App() {
 
   const findArticle = (match) => {
     const article = originalArticles.find((article) => {
-      article.title.includes(match);
-      return article;
+      return article.title.includes(match);
     });
     return article;
   };
