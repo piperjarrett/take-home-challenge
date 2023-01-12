@@ -5,7 +5,7 @@
     margin: 5rem;
     flex-wrap: wrap;
     justify-content: space-around;
-    border: 1px solid #494d5f;
+    border: 1px solid black;
     background-color: white;
     padding: 1rem;
     flex-direction: column;
@@ -18,13 +18,25 @@
     flex-direction: column;
     padding: 3rem;
     /* width: 30rem;
-    background-color: #494d5f; */
+    background-color: black; */
     color: white
 }
 
 .nyTimes-article {
-    text-decoration: underline;
-    color: blue;
+    background-color: rgba(51, 51, 51, 0.05);
+    border-radius: 8px;
+    border-width: 0;
+    color: black;
+    cursor: pointer;
+    display: inline-block;
+    font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20px;
+    list-style: none;
+    margin-top: 1rem;
+    padding: 10px 12px;
+    text-align: center;
 }
 
 .nyTimes-article:hover {
@@ -32,6 +44,12 @@
 }
 
 .date-section {
+    width: 30rem;
     display: flex;
     justify-content: space-evenly;
+}
+
+.p-info {
+    padding: 1rem;
+    width: 35rem;
 }

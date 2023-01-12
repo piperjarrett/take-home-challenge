@@ -1,7 +1,9 @@
 .articles-container {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    flex-direction: row;
-    align-content: center;
+    flex-direction: column;
+
+}
+
+p {
+    margin: 0;
 }

@@ -1,40 +1,38 @@
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import "./ArticleDetails.css";
-const ArticleDetails = ({ articles, articleTitle }) => {
-  console.log(articles);
-  console.log(articleTitle);
+const ArticleDetails = ({ article}) => {
 
-  const selectedArticle = articles.find((article) =>
-    article.title.includes(articleTitle.title)
-  );
-
-  const dateCreated = new Date(selectedArticle.created_date);
+  const dateCreated = new Date(article.created_date);
   const year = dateCreated.getFullYear();
   const day = dateCreated.getDay();
   const month = dateCreated.getMonth();
 
   const newTab = () => {
-    window.open(selectedArticle.short_url);
+    window.open(article.short_url);
   };
 
   return (
     <div className="details">
-      {/* <div className="info"> */}
-      <h3>{selectedArticle.title}</h3>
-      <h4>{selectedArticle.byline}</h4>
-      <img className="details-image" src={selectedArticle.multimedia[1].url} />
-      <p>{selectedArticle.abstract}</p>
+      <h3>{article.title}</h3>
+      <h4>{article.byline}</h4>
+      <img
+        className="details-image"
+        src={
+          article.multimedia?.[1].url ||
+          "https://library.northwestu.edu/wp-content/uploads/2019/06/nytimes.png"
+        }
+      />
+      <p className="p-info">{article.abstract}</p>
       <div className="date-section">
-        <p>
+        <p className="p-info">
           Created: {1 + month}/{day}/{year}
         </p>
-        <p>Section: {selectedArticle.section.toUpperCase()}</p>
+        <p className="p-info">Section: {article.section.toUpperCase()}</p>
       </div>
       <p className="nyTimes-article" onClick={newTab}>
-        Read more
+        Read Entire Article
       </p>
     </div>
-    // </div>
   );
 };
 

@@ -1,6 +1,6 @@
 // import logo from './logo.svg';
 import "./App.css";
-import { NavLink, Route } from "react-router-dom";
+import { Route } from "react-router-dom";
 import { useEffect, useState } from "react";
 import Articles from "../Articles/Articles";
 import ArticleDetails from "../ArticleDetails/ArticleDetails";
@@ -11,27 +11,35 @@ function App() {
   const [originalArticles, setOriginalArticles] = useState([]);
   const [sections, setSetctions] = useState("");
   const [error, setError] = useState("");
-
+  // const apiKey = process.env.REACT_APP_API_KEY;
   useEffect(() => {
     fetch(
-      "https://api.nytimes.com/svc/topstories/v2/home.json?api-key=Gt7He9ek2wKxfiDtXaqvAIdfCOwBIrQw"
+      `https://api.nytimes.com/svc/topstories/v2/home.json?api-key=${process.env.REACT_APP_API_KEY}`
     )
       .then((resp) => resp.json())
       .then((data) => {
         setOriginalArticles(data.results);
       })
-      .catch((err) => setError(err));
+      .catch((err) => setError(err.message));
   }, []);
 
   const filterResults = (event) => {
     const filteredBySubsection = originalArticles.filter((article) => {
-      console.log(article.section);
       if (article.section === event.target.value) {
         return article;
       }
     });
     setFilteredArticles(filteredBySubsection);
   };
+
+  const findArticle = (match) => {
+    const article = originalArticles.find((article) => {
+      article.title.includes(match);
+      return article;
+    });
+    return article;
+  };
+
   return (
     <main className="App">
       <header className="App-header">
@@ -39,6 +47,9 @@ function App() {
           <h1>Find Your Article</h1>
         </a>
       </header>
+      {/* error ? (
+      <h2>Sorry there was a problem getting these articles, try again later</h2>
+      ) : ( */}
       <Route exact path="/">
         <Search filterResults={filterResults} articles={originalArticles} />
         <Articles
@@ -50,14 +61,10 @@ function App() {
         exact
         path="/:title"
         render={({ match }) => {
-          return (
-            <ArticleDetails
-              articles={originalArticles}
-              articleTitle={match.params}
-            />
-          );
+          return <ArticleDetails article={findArticle(match.params.title)} />;
         }}
       />
+      {/* ) */}
     </main>
   );
 }

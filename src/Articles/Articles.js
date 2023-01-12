@@ -5,11 +5,11 @@ const Articles = ({ originalArticles, filteredArticles }) => {
   let allArticles;
   if (!filteredArticles.length) {
     allArticles = originalArticles.map((article) => {
-      return <Article article={article} />;
+      return <Article key={article.uri} article={article} />
     });
   } else {
     allArticles = filteredArticles.map((article) => {
-      return <Article article={article} />;
+      return <Article key={article.uri} article={article} />;
     });
   }
 
