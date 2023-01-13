@@ -1,7 +1,5 @@
-
 import "./ArticleDetails.css";
 const ArticleDetails = ({ article }) => {
-
   const newTab = () => {
     window.open(article.short_url);
   };
@@ -23,9 +21,14 @@ const ArticleDetails = ({ article }) => {
       <div className="date-section">
         <p className="p-info">Section: {article.section.toUpperCase()}</p>
       </div>
-      <p className="nyTimes-article" onClick={newTab}>
-        Read Entire Article
-      </p>
+      <div className="button">
+        <p className="nyTimes-article" onClick={newTab}>
+          Read Entire Article
+        </p>
+        <a href="/">
+          <button>Go Home</button>
+        </a>
+      </div>
     </div>
   );
 };
