@@ -14,9 +14,9 @@
 Tasked with creating a news reader applicaation from the New York Times Api. 
 
 ## Links
-- [Project spec]()
-- [WireFrame]()
-- [Deployed Project]()
+- [Project spec](https://mod4.turing.edu/projects/take_home/take_home_fe)
+- [WireFrame](https://miro.com/app/board/uXjVP0VfQN8=/)
+- [Deployed Project](https://take-home-challenge-theta.vercel.app/)
 
 ## Learning Goals 
 Tasked withing showing:
