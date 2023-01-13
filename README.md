@@ -11,8 +11,7 @@
 - [Contributors](#contributors)
 
 ## Introduction
-Have you ever had a couple of ingredients for a coctktail but never knew what to make, or been a bartender and have someone tell you suprise you with a drink that has Vodka? 
-If so, Cocktail Creator is a webpage to help you find that perfect drink.
+Tasked with creating a news reader applicaation from the New York Times Api. 
 
 ## Links
 - [Project spec]()
@@ -20,21 +19,25 @@ If so, Cocktail Creator is a webpage to help you find that perfect drink.
 - [Deployed Project]()
 
 ## Learning Goals 
-- demonstrate mastery of: 
-  - React
-  - Router
-  - Asynchronus JavaScript
-  - End to end testing with Cypress
+Tasked withing showing:
+  - A list of articles
+  - A “detailed” view for each article (as opposed to summary/list view)
+  - Articles in the list must link to the detailed article view you create
+  - Some sort of search, filter, OR sort
+
 
 ## Features
-Visit the homepage and search a specific ingredient you want in your drink! The webpage will automatically filter and display which drinks contain that ingredient. 
+Visit the homepage and see all articles from the api
 
 ![Coctail_Creator_Homepage](https://media3.giphy.com/media/p1KFnSODvEm1Riloro/giphy.gif?cid=790b761190eeac1930b2185e49c4f9cdab7bebdd444560ef&rid=giphy.gif&ct=g)
 
-You are also able to see the directions and recipe for a drink you want! Rate this drink from 1-5 stars so others who visit the app will now how tasty it was.
+As a user you can sort through all the articles based on their section and see a detials page about the article.
 
 ![Drink_info](https://media0.giphy.com/media/NhxCRppDN6eDzfsYud/giphy.gif?cid=790b76112eb709a3ef3dce5df599c722a48c669c3e6dc577&rid=giphy.gif&ct=g)
 
+As a user you are able to 'Read Entire Article" and be taken to the New York Times page. 
+
+![Link_To_NY_Times]()
 
 ## Setup
 1. Fork this repo - on the top right corner of this page, click the **Fork** button. 
