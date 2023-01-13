@@ -27,17 +27,18 @@ Tasked withing showing:
 
 
 ## Features
-Visit the homepage and see all articles from the api
+Visit the homepage and see
+ all articles from the api
 
-![Coctail_Creator_Homepage](https://media3.giphy.com/media/p1KFnSODvEm1Riloro/giphy.gif?cid=790b761190eeac1930b2185e49c4f9cdab7bebdd444560ef&rid=giphy.gif&ct=g)
+![Screen Shot 2023-01-13 at 8 43 08 AM](https://user-images.githubusercontent.com/106850657/212371955-df28ebb6-9acb-4e7c-8102-bc613a2347a8.png)
 
 As a user you can sort through all the articles based on their section and see a detials page about the article.
 
-![Drink_info](https://media0.giphy.com/media/NhxCRppDN6eDzfsYud/giphy.gif?cid=790b76112eb709a3ef3dce5df599c722a48c669c3e6dc577&rid=giphy.gif&ct=g)
+![Sort](https://media3.giphy.com/media/JzCVk5v0WR1p4vZsxM/giphy.gif?cid=790b7611286dad0dd78acb8df014eeba113588f60b28ee78&rid=giphy.gif&ct=g)
 
 As a user you are able to 'Read Entire Article" and be taken to the New York Times page. 
 
-![Link_To_NY_Times]()
+![Link_To_NY_Times](https://media4.giphy.com/media/Iwa1KxwpvczkY933jk/giphy.gif?cid=790b7611f9b034579a417354e3d218b2af5997be6451f7c6&rid=giphy.gif&ct=g)
 
 ## Setup
 1. Fork this repo - on the top right corner of this page, click the **Fork** button. 
